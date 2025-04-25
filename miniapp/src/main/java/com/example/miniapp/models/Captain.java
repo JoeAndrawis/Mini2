@@ -21,17 +21,14 @@ public class Captain implements Serializable {
     @OneToMany(mappedBy = "captain", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Trip> trips;
 
-    // Default constructor
     public Captain() {
     }
 
-    // Partial constructor (without ID and trips list)
     public Captain(String name, String licenseNumber) {
         this.name = name;
         this.licenseNumber = licenseNumber;
     }
 
-    // Full constructor
     public Captain(Long id, String name, String licenseNumber, Double avgRatingScore) {
         this.id = id;
         this.name = name;
@@ -39,7 +36,6 @@ public class Captain implements Serializable {
         this.avgRatingScore = avgRatingScore;
     }
 
-    // Getters and Setters
 
     public Long getId() {
         return id;

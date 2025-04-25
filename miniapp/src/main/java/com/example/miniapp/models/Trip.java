@@ -31,11 +31,9 @@ public class Trip implements Serializable {
     @OneToOne(mappedBy = "trip", cascade = CascadeType.ALL)
     private Payment payment;
 
-    // Default constructor
     public Trip() {
     }
 
-    // Partial constructor (without id, captain, customer, payment)
     public Trip(LocalDateTime tripDate, String origin, String destination, Double tripCost) {
         this.tripDate = tripDate;
         this.origin = origin;
@@ -43,7 +41,6 @@ public class Trip implements Serializable {
         this.tripCost = tripCost;
     }
 
-    // Full constructor
     public Trip(Long id, LocalDateTime tripDate, String origin, String destination, Double tripCost, Captain captain, Customer customer, Payment payment) {
         this.id = id;
         this.tripDate = tripDate;
@@ -55,7 +52,6 @@ public class Trip implements Serializable {
         this.payment = payment;
     }
 
-    // Getters and Setters
 
     public Long getId() {
         return id;
