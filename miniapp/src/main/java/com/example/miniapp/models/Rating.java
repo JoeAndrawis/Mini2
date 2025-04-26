@@ -33,6 +33,12 @@ public class Rating implements Serializable {
         this.ratingDate = ratingDate;
     }
 
+    public Rating(Long entityId, String entityType, Integer score) {
+        this.entityId = entityId;
+        this.entityType = entityType;
+        this.score = score;
+    }
+
     public Rating(String id, Long entityId, String entityType, Integer score, String comment, LocalDateTime ratingDate) {
         this.id = id;
         this.entityId = entityId;

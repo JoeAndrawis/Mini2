@@ -41,6 +41,11 @@ public class Trip implements Serializable {
         this.tripCost = tripCost;
     }
 
+    public Trip(String origin, String destination) {
+        this.origin = origin;
+        this.destination = destination;
+    }
+
     public Trip(Long id, LocalDateTime tripDate, String origin, String destination, Double tripCost, Captain captain, Customer customer, Payment payment) {
         this.id = id;
         this.tripDate = tripDate;

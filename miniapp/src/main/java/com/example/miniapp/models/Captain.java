@@ -29,6 +29,16 @@ public class Captain implements Serializable {
         this.licenseNumber = licenseNumber;
     }
 
+    public Captain(String name, String licenseNumber, double avgRatingScore) {
+        this.name = name;
+        this.licenseNumber = licenseNumber;
+        this.avgRatingScore = avgRatingScore;
+    }
+
+    public Captain(String name) {
+        this.name = name;
+    }
+
     public Captain(Long id, String name, String licenseNumber, Double avgRatingScore) {
         this.id = id;
         this.name = name;
